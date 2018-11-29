@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03D3869A1ECC2DEA006B4C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D386991ECC2DEA006B4C25 /* AppDelegate.swift */; };
-		03D3869C1ECC2DEA006B4C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3869B1ECC2DEA006B4C25 /* ViewController.swift */; };
 		03D3869F1ECC2DEA006B4C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D3869D1ECC2DEA006B4C25 /* Main.storyboard */; };
 		03D386A21ECC2DEA006B4C25 /* SpinWheelExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03D386A01ECC2DEA006B4C25 /* SpinWheelExample.xcdatamodeld */; };
 		03D386A41ECC2DEA006B4C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D386A31ECC2DEA006B4C25 /* Assets.xcassets */; };
@@ -16,8 +15,14 @@
 		03D386B21ECC2DEA006B4C25 /* SpinWheelExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D386B11ECC2DEA006B4C25 /* SpinWheelExampleTests.swift */; };
 		03D386BD1ECC2DEA006B4C25 /* SpinWheelExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D386BC1ECC2DEA006B4C25 /* SpinWheelExampleUITests.swift */; };
 		03D386CB1ECC2E3C006B4C25 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 03D386CA1ECC2E3C006B4C25 /* Podfile */; };
-		03D386CD1ECC2ECC006B4C25 /* SpinWheelControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D386CC1ECC2ECC006B4C25 /* SpinWheelControl.framework */; };
-		A13E1E9D333625C4BEF01356 /* Pods_SpinWheelExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB94D17A97194AFBC303A6F2 /* Pods_SpinWheelExample.framework */; };
+		F4CA0CCC2162060200FC97EC /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0CCB2162060200FC97EC /* Connectable.swift */; };
+		F4CA0CCE2162063400FC97EC /* CustomSpin.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4CA0CCD2162063400FC97EC /* CustomSpin.xib */; };
+		F4CA0CF82162095000FC97EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3869B1ECC2DEA006B4C25 /* ViewController.swift */; };
+		F4CA0CF92162095300FC97EC /* CustomSpinWheelWedge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0CCF216206C900FC97EC /* CustomSpinWheelWedge.swift */; };
+		F4CA0CFA2162095800FC97EC /* CustomSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0CC9216205D700FC97EC /* CustomSpin.swift */; };
+		F4CA0D0121620C1400FC97EC /* SpinWheelControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CA0D0021620C1400FC97EC /* SpinWheelControl.framework */; };
+		F4CA0D0221620C1B00FC97EC /* SpinWheelControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CA0D0021620C1400FC97EC /* SpinWheelControl.framework */; };
+		F4CA0D0321620C1B00FC97EC /* SpinWheelControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4CA0D0021620C1400FC97EC /* SpinWheelControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F4CA0CEE216208C900FC97EC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4CA0D0321620C1B00FC97EC /* SpinWheelControl.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		03D386961ECC2DEA006B4C25 /* SpinWheelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinWheelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D386991ECC2DEA006B4C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,10 +72,13 @@
 		03D386BC1ECC2DEA006B4C25 /* SpinWheelExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinWheelExampleUITests.swift; sourceTree = "<group>"; };
 		03D386BE1ECC2DEA006B4C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03D386CA1ECC2E3C006B4C25 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		03D386CC1ECC2ECC006B4C25 /* SpinWheelControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpinWheelControl.framework; path = "../../../Library/Developer/Xcode/DerivedData/SpinWheelExample-ealxwjolniycmkbbslggwirnbtrf/Build/Products/Debug-iphonesimulator/SpinWheelControl/SpinWheelControl.framework"; sourceTree = "<group>"; };
 		BFC5CB8D53D1E73AA9C433D0 /* Pods-SpinWheelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinWheelExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpinWheelExample/Pods-SpinWheelExample.release.xcconfig"; sourceTree = "<group>"; };
+		F4CA0CC9216205D700FC97EC /* CustomSpin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSpin.swift; sourceTree = "<group>"; };
+		F4CA0CCB2162060200FC97EC /* Connectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
+		F4CA0CCD2162063400FC97EC /* CustomSpin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSpin.xib; sourceTree = "<group>"; };
+		F4CA0CCF216206C900FC97EC /* CustomSpinWheelWedge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSpinWheelWedge.swift; sourceTree = "<group>"; };
+		F4CA0D0021620C1400FC97EC /* SpinWheelControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpinWheelControl.framework; sourceTree = "<group>"; };
 		F7D74D59FD702D9314C8B929 /* Pods-SpinWheelExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinWheelExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpinWheelExample/Pods-SpinWheelExample.debug.xcconfig"; sourceTree = "<group>"; };
-		FB94D17A97194AFBC303A6F2 /* Pods_SpinWheelExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpinWheelExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03D386CD1ECC2ECC006B4C25 /* SpinWheelControl.framework in Frameworks */,
-				A13E1E9D333625C4BEF01356 /* Pods_SpinWheelExample.framework in Frameworks */,
+				F4CA0D0221620C1B00FC97EC /* SpinWheelControl.framework in Frameworks */,
+				F4CA0D0121620C1400FC97EC /* SpinWheelControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,10 +137,14 @@
 				03D386991ECC2DEA006B4C25 /* AppDelegate.swift */,
 				03D3869B1ECC2DEA006B4C25 /* ViewController.swift */,
 				03D3869D1ECC2DEA006B4C25 /* Main.storyboard */,
+				F4CA0CCB2162060200FC97EC /* Connectable.swift */,
 				03D386A31ECC2DEA006B4C25 /* Assets.xcassets */,
 				03D386A51ECC2DEA006B4C25 /* LaunchScreen.storyboard */,
 				03D386A81ECC2DEA006B4C25 /* Info.plist */,
 				03D386A01ECC2DEA006B4C25 /* SpinWheelExample.xcdatamodeld */,
+				F4CA0CC9216205D700FC97EC /* CustomSpin.swift */,
+				F4CA0CCD2162063400FC97EC /* CustomSpin.xib */,
+				F4CA0CCF216206C900FC97EC /* CustomSpinWheelWedge.swift */,
 			);
 			path = SpinWheelExample;
 			sourceTree = "<group>";
@@ -144,8 +170,7 @@
 		9122F8A9AEC4394EDEF9CA26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03D386CC1ECC2ECC006B4C25 /* SpinWheelControl.framework */,
-				FB94D17A97194AFBC303A6F2 /* Pods_SpinWheelExample.framework */,
+				F4CA0D0021620C1400FC97EC /* SpinWheelControl.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,7 +195,7 @@
 				03D386921ECC2DEA006B4C25 /* Sources */,
 				03D386931ECC2DEA006B4C25 /* Frameworks */,
 				03D386941ECC2DEA006B4C25 /* Resources */,
-				35088516926E89354336EDFE /* [CP] Embed Pods Frameworks */,
+				F4CA0CEE216208C900FC97EC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,7 +254,6 @@
 				TargetAttributes = {
 					03D386951ECC2DEA006B4C25 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = JNJPB8D7PF;
 						ProvisioningStyle = Automatic;
 					};
 					03D386AC1ECC2DEA006B4C25 = {
@@ -275,6 +299,7 @@
 				03D386A41ECC2DEA006B4C25 /* Assets.xcassets in Resources */,
 				03D386CB1ECC2E3C006B4C25 /* Podfile in Resources */,
 				03D3869F1ECC2DEA006B4C25 /* Main.storyboard in Resources */,
+				F4CA0CCE2162063400FC97EC /* CustomSpin.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,24 +320,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		35088516926E89354336EDFE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SpinWheelExample/Pods-SpinWheelExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SpinWheelControl/SpinWheelControl.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpinWheelControl.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpinWheelExample/Pods-SpinWheelExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C43B5B5224D44389E2CCB0B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,8 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03D3869C1ECC2DEA006B4C25 /* ViewController.swift in Sources */,
 				03D3869A1ECC2DEA006B4C25 /* AppDelegate.swift in Sources */,
+				F4CA0CF92162095300FC97EC /* CustomSpinWheelWedge.swift in Sources */,
+				F4CA0CCC2162060200FC97EC /* Connectable.swift in Sources */,
+				F4CA0CF82162095000FC97EC /* ViewController.swift in Sources */,
+				F4CA0CFA2162095800FC97EC /* CustomSpin.swift in Sources */,
 				03D386A21ECC2DEA006B4C25 /* SpinWheelExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,7 +505,12 @@
 			baseConfigurationReference = F7D74D59FD702D9314C8B929 /* Pods-SpinWheelExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JNJPB8D7PF;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SpinWheelExample",
+				);
 				INFOPLIST_FILE = SpinWheelExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BigSmashSoftware.SpinWheelExample;
@@ -509,7 +524,12 @@
 			baseConfigurationReference = BFC5CB8D53D1E73AA9C433D0 /* Pods-SpinWheelExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JNJPB8D7PF;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SpinWheelExample",
+				);
 				INFOPLIST_FILE = SpinWheelExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BigSmashSoftware.SpinWheelExample;
@@ -524,6 +544,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JNJPB8D7PF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SpinWheelExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BigSmashSoftware.SpinWheelExampleTests;
@@ -539,6 +563,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JNJPB8D7PF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SpinWheelExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BigSmashSoftware.SpinWheelExampleTests;
@@ -553,6 +581,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JNJPB8D7PF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SpinWheelExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BigSmashSoftware.SpinWheelExampleUITests;
@@ -567,6 +599,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JNJPB8D7PF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SpinWheelExampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BigSmashSoftware.SpinWheelExampleUITests;

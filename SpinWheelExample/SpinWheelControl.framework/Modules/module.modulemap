@@ -1,0 +1,11 @@
+framework module SpinWheelControl {
+  umbrella header "SpinWheelControl.h"
+
+  export *
+  module * { export * }
+}
+
+module SpinWheelControl.Swift {
+    header "SpinWheelControl-Swift.h"
+    requires objc
+}

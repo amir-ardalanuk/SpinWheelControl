@@ -279,10 +279,15 @@ open class SpinWheelControl: UIControl {
             //Wedge shape
             wedge.shape.configureWedgeShape(index: wedgeNumber, radius: radius, position: spinWheelCenter, degreesPerWedge: degreesPerWedge)
             wedge.layer.addSublayer(wedge.shape)
+            wedge.layer.mask = wedge.shape
             
             //Wedge label
             wedge.label.configureWedgeLabel(index: wedgeNumber, width: radius * 0.9, position: spinWheelCenter, orientation: self.wedgeLabelOrientationIndex, radiansPerWedge: radiansPerWedge)
             wedge.addSubview(wedge.label)
+            
+            wedge.customView.configureWedgeLabel(index: wedgeNumber, width: radius * 0.9, position: spinWheelCenter, orientation: self.wedgeLabelOrientationIndex, radiansPerWedge: radiansPerWedge)
+            
+            wedge.addSubview(wedge.customView)
             
             //Add the shape and label to the spinWheelView
             spinWheelView.addSubview(wedge)
@@ -367,7 +372,13 @@ open class SpinWheelControl: UIControl {
         //If the user just tapped, move to that wedge
         if currentStatus == .idle &&
             tapCount > 0 &&
-            currentlyDetectingTap {}
+            currentlyDetectingTap {
+             print("Tap Tap Tap")
+            let radians = radiansForTouch(touch: touch!)
+            self.snapToCustomRadians(radians: radians)
+            
+           
+        }
             //Else decelerate
         else {
             beginDeceleration()
@@ -436,9 +447,25 @@ open class SpinWheelControl: UIControl {
         currentStatus = .snapping
         
         let nearestWedge: Int = Int(round(((currentRadians + (radiansPerWedge / 2)) + snappingPositionRadians) / radiansPerWedge))
-        
         selectWedgeAtIndexOffset(index: nearestWedge, animated: true)
     }
+    
+    func snapToCustomRadians(radians : Radians){
+      
+        let indexSnapped: Radians = (-(radians) + currentRadians + (radiansPerWedge / 2))
+        //let currentRadians = ((radians) + (snappingPositionRadians) + (radiansPerWedge / 2 ) ) / radiansPerWedge
+        var index = Int(round( indexSnapped ))
+        
+       
+        if index < 0 {
+            index = Int(self.numberOfWedges) - 1
+        }
+        print("index" ,index)
+        selectWedgeAtIndexOffset(index: index, animated: true)
+        delegate?.tapOn?(index: index)
+    }
+    
+    
     
     
     @objc func snapStep() {
@@ -489,13 +516,14 @@ open class SpinWheelControl: UIControl {
     
     
     //Select a wedge with an index offset relative to 0 position. May be positive or negative.
-    @objc func selectWedgeAtIndexOffset(index: Int, animated: Bool) {
+    @objc public func selectWedgeAtIndexOffset(index: Int, animated: Bool) {
         snapDestinationRadians = -(snappingPositionRadians) + (CGFloat(index) * radiansPerWedge) - (radiansPerWedge / 2)
         
         if currentRadians != snapDestinationRadians {
             snapIncrementRadians = radiansToDestinationSlice / SpinWheelControl.kWedgeSnapVelocityMultiplier
         }
         else {
+            print("selectWedgeAtIndexOffset return")
             return
         }
         

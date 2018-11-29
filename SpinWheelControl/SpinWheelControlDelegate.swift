@@ -16,4 +16,6 @@ import UIKit
     
     //Triggered at various intervals. The variable radians describes how many radians the spin wheel control has moved since the last time this method was called.
     @objc optional func spinWheelDidRotateByRadians(radians: CGFloat)
+    
+    @objc optional func tapOn(index: Int)
 }

@@ -12,4 +12,6 @@ open class SpinWheelWedge: UIView {
     @objc public var shape: SpinWheelWedgeShape = SpinWheelWedgeShape()
     
     @objc public var label: SpinWheelWedgeLabel = SpinWheelWedgeLabel()
+    
+    @objc open var customView: SpinWheelWedgeView = SpinWheelWedgeView()
 }

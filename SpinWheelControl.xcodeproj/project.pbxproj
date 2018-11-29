@@ -20,6 +20,7 @@
 		03D386DB1ECED9BE006B4C25 /* SpinWheelWedgeShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D386DA1ECED9BE006B4C25 /* SpinWheelWedgeShape.swift */; };
 		03D386DD1ECED9D8006B4C25 /* SpinWheelWedgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D386DC1ECED9D8006B4C25 /* SpinWheelWedgeLabel.swift */; };
 		03D386DF1ECED9F2006B4C25 /* Degrees+MathMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D386DE1ECED9F2006B4C25 /* Degrees+MathMethods.swift */; };
+		F4CA0C8F2161F17200FC97EC /* SpinWheelWedgeCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA0C8E2161F17100FC97EC /* SpinWheelWedgeCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		03D386DA1ECED9BE006B4C25 /* SpinWheelWedgeShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinWheelWedgeShape.swift; sourceTree = "<group>"; };
 		03D386DC1ECED9D8006B4C25 /* SpinWheelWedgeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinWheelWedgeLabel.swift; sourceTree = "<group>"; };
 		03D386DE1ECED9F2006B4C25 /* Degrees+MathMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Degrees+MathMethods.swift"; sourceTree = "<group>"; };
+		F4CA0C8E2161F17100FC97EC /* SpinWheelWedgeCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinWheelWedgeCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				03D386D81ECED967006B4C25 /* SpinWheelWedge.swift */,
 				03D386DA1ECED9BE006B4C25 /* SpinWheelWedgeShape.swift */,
 				03D386DC1ECED9D8006B4C25 /* SpinWheelWedgeLabel.swift */,
+				F4CA0C8E2161F17100FC97EC /* SpinWheelWedgeCustomView.swift */,
 				03D386DE1ECED9F2006B4C25 /* Degrees+MathMethods.swift */,
 			);
 			path = SpinWheelControl;
@@ -173,7 +176,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Big Smash Software";
 				TargetAttributes = {
 					032627421EB2AC7700AED82E = {
@@ -240,6 +243,7 @@
 				0326275E1EB2AC9100AED82E /* SpinWheelControl.swift in Sources */,
 				03D386DF1ECED9F2006B4C25 /* Degrees+MathMethods.swift in Sources */,
 				03D386DD1ECED9D8006B4C25 /* SpinWheelWedgeLabel.swift in Sources */,
+				F4CA0C8F2161F17200FC97EC /* SpinWheelWedgeCustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +280,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -283,6 +288,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -337,6 +343,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -344,6 +351,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

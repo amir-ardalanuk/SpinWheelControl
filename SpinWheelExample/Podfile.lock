@@ -1,16 +1,3 @@
-PODS:
-  - SpinWheelControl (0.1.5)
+PODFILE CHECKSUM: 4500fbd74a1edc7080b411b366bd05192f6b7df5
 
-DEPENDENCIES:
-  - SpinWheelControl
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SpinWheelControl
-
-SPEC CHECKSUMS:
-  SpinWheelControl: a4c151fc62fcbed65b31804d0022f7161c47cc2b
-
-PODFILE CHECKSUM: f3deb63d8c066bf97482fe3fb609cff5e1d5cc8a
-
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.2
